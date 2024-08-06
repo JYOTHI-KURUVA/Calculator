@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url("https://img.freepik.com/free-vector/pastel-gradient-2_78370-257.jpg");
+                background-repeat: no-repeat;
+                background-size: 2000px 850px;
+            }
+            .f{
+                background-color: bisque;
+                color:brown;
+                padding:20px 40px;
+                text-align:center;
+                font-size:30px;
+            }
+            .t{
+                font-size:30px;
+            }
+            .h{
+                background-color: aqua;
+                color:palevioletred;
+                padding:5px;
+            }
+            table{
+                border:4px solid gray;
+            }
+        </style>
+        </head>
+        <body>
+            <center>
+                <table border="3px solid gray" cellspacing="5px" cellpadding="5px" >
+                    <caption><h1 class="h">SIMPLE CALCULATOR</h1></caption>
+                    <tr>
+                        <td colspan="3" text-align="center" bgcolor="black"><input type="text" class="t" id="res">
+                            <td text-align="center"><button class="f" onclick="ac()">AC</button></td>   
+                    </tr>
+                    <tr>
+                        <td text-align="center"><button class="f" onclick="show('1')">1</button></td>
+                        <td text-align="center"><button class="f" onclick="show('2')">2</button></td>
+                        <td text-align="center"><button class="f" onclick="show('3')">3</button></td>
+                        <td text-align="center"><button class="f" onclick="show('+')">+</button></td>
+                        </tr>
+
+                        <tr>
+                            <td text-align="center"><button class="f" onclick="show('4')">4</button></td>
+                            <td text-align="center"><button class="f" onclick="show('5')">5</button></td>
+                            <td text-align="center"><button class="f" onclick="show('6')">6</button></td>
+                            <td text-align="center"><button class="f" onclick="show('-')">-</button></td>
+                            </tr>
+
+                            <tr>
+                                <td text-align="center"><button class="f" onclick="show('7')">7</button></td>
+                                <td text-align="center"><button class="f" onclick="show('8')">8</button></td>
+                                <td text-align="center"><button class="f" onclick="show('9')">9</button></td>
+                                <td text-align="center"><button class="f" onclick="show('*')">*</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td text-align="center"><button class="f" onclick="show('0')">0</button></td>
+                                    <td text-align="center"><button class="f" onclick="show('%')">%</button></td>
+                                    <td text-align="center"><button class="f" onclick="show('/')">/</button></td>
+                                    <td text-align="center"><button class="f" onclick="show('=')">=</button></td>
+                                    </tr>
+                                    </table></center>
+                                    <script>
+                                        
+                                        function ac(){
+                                            document.getElementById("res").value="";
+
+                                        }
+                                        function show(input){
+                                            document.getElementById("res").value+=input;
+                                        }
+                                        function cal()
+                                        {
+                                            var output=eval(document.getElementById("res").value);
+                                            document.getElementById("res").value=output;
+
+                                        }
+
+
+                                    </script>
+            
+        </body>
+    </html>
